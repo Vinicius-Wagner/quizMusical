@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styleHome.css">
+    <title>Quiz Musical</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">Music Quiz</div>
+        <div class="hamburger">
+            <div class="linha"></div>
+            <div class="linha"></div>
+            <div class="linha"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="ranking.html">Ranking</a>
+                </li>
+                <li>
+                    <a href="login.html">Login</a>
+                </li>
+                <li>
+                    <a href="signUp.html">Sign Up</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">    
+        <h1>Aperte o botão para iniciar:</h1>
+        <button type="submit" id="container__botaoPlay" class="container__botaoPlay" onclick="openPopUp()"><img src="./assets/botaoPlay256.png" alt=""></button>
+        
+        <section class="popUp" id="popup">
+            
+            <section class="popUp__linha">
+                <div class="popUp__opcao">
+                    <a href="genero1.html">
+                        <button class="btnOpcao" onclick="closePopUp()">Genero 1</button>
+                    </a>
+                </div>
+
+                <div class="popUp__opcao">
+                    <button class="btnOpcao">Genero 2</button>
+                </div>
+            </section>
+
+            <section class="popUp__linha">
+                <div class="popUp__opcao">
+                    <button class="btnOpcao">Genero 3</button>
+                </div>
+
+                <div class="popUp__opcao">
+                    <button class="btnOpcao">Genero 4</button>
+                </div>
+            </section>
+
+        </section>
+    </main>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

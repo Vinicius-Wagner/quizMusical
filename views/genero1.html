@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styleGenero1.css">
+    <title>Quiz Musical</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">Music Quiz</div>
+        <div class="hamburger">
+            <div class="linha"></div>
+            <div class="linha"></div>
+            <div class="linha"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="ranking.html">Ranking</a>
+                </li>
+                <li>
+                    <a href="login.html">Login</a>
+                </li>
+                <li>
+                    <a href="signUp.html">Sign Up</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <label for="container__texto">Selecione a alternativa que contém o seguinte verso: <label id="container__verso"></label> </label>
+        <section class="container__escolha">
+            <button type="submit" class="container__escolha__btn" id="container__escolha__btn" onclick="openPopUpCorreto()">
+                <img class="container__escolha__btn__img" src="./assets/albumimg1.png" alt="albumimg1">
+                <p>Star Boy - The Weeknd</p>
+            </button>
+            <button type="submit" class="container__escolha__btn" id="container__escolha__btn" onclick="openPopUpErrado()">
+                <img class="container__escolha__btn__img" src="./assets/albumimg2.png" alt="albumimg2">
+                <p>Havana - Camila Cabello</p>
+            </button>
+        </section>
+
+        <label for="questaoN">1/10</label>
+
+        <section class="popUpCerto" id="popUpCerto">
+            <p>Resposta Correta!</p>
+        </section>
+
+        <section class="popUpErrado" id="popUpErrado">
+            <p>Resposta Errada!</p>
+        </section>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore-compat.js"></script>
+    <script src="genero1.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

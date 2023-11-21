@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Mooli&family=Open+Sans:wght@500&family=Satisfy&display=swap');
+
+:root{
+    --cor-primaria: #272829;
+    --cor-secundaria: #61677A;
+    --cor-terciaria: #FFF6E0;
+    --cor-borda: #D2CAB9;
+    --cor-hover: #d6ceba;
+    --cor-hoverBorda: #999388;
+
+    --fonte-primaria: 'Montserrat', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Mooli', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--cor-primaria);
+}
+
+.cabecalho{
+    width: 100%;
+    height: 80px;
+    background: var(--cor-secundaria);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.logo{
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Satisfy', cursive;
+    color: var(--cor-terciaria);
+}
+
+.hamburger{
+    display: none;
+}
+
+.nav-bar ul{
+    display: flex;
+}
+
+.nav-bar ul li a{
+    display: block;
+    color: var(--cor-terciaria);
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+
+}
+
+.nav-bar ul li a:hover{
+    color: var(--cor-secundaria);
+    background: var(--cor-terciaria);
+
+}
+
+.nav-bar ul li a.active{
+    color: var(--cor-secundaria);
+    background: var(--cor-terciaria);
+}
+
+@media only screen and (max-width: 1320px){
+    .cabecalho{
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .cabecalho{
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger .linha{
+        width: 30px;
+        height: 3px;
+        background: var(--cor-terciaria);
+        margin: 6px 0;
+    }
+
+    .nav-bar{
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: var(--cor-secundaria);
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    .nav-bar.active{
+        height: 450px;
+    }
+    .nav-bar ul{
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    .nav-bar.active ul{
+        opacity: 1;
+    }
+
+    .nav-bar ul li a{
+        margin-bottom: 12px;
+    }
+}
+
+.container{
+    margin-top: 20vh;
+    display: flex;
+    color: var(--cor-terciaria);
+    flex-direction: column;
+    align-items: center;
+}
+
+.container__botaoPlay{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 360px;
+    transition: 0.3s;
+}
+
+.container__botaoPlay:hover{
+    opacity: 0.6;
+}
+
+.popUp{
+    width: 35vw;
+    background: var(--cor-primaria);
+    border: 10px solid;
+    border-radius: 6px;
+    border-color: var(--cor-terciaria);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    padding: 2vw;
+    color: var(--cor-terciaria);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2.5vw;
+    visibility: hidden;
+    transition: 0.4s, top 0.4s;
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popUp__linha{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.btnOpcao{
+    font-size: 2vw;
+    font-weight: bold;
+    width: 10vw;
+    height: 12vw;
+    background: var(--cor-terciaria);
+    border-radius: 10px;
+    color: var(--cor-primaria);
+    padding: 3px;
+    cursor: pointer;
+}
